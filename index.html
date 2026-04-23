@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+      /* Epilogue */
+
+      :root {
+        /* ## Colors */
+
+        /* ### Neutral */
+
+        --Gray-50: hsl(0, 0%, 98%);
+        --Gray-500: hsl(0, 0%, 41%);
+        --Gray-950: hsl(0, 0%, 8%);
+      }
+    </style>
+  </head>
+  <body class="font-[Epilogue] min-h-screen relative">
+    <nav class="flex justify-between pt-[30px] pb-[30px] px-[10px] sm:hidden">
+      <img
+        src="/intro-section-with-dropdown-navigation-main/images/logo.svg"
+        alt=""
+        class="cursor-pointer"
+      />
+
+      <img
+        src="/intro-section-with-dropdown-navigation-main/images/icon-menu.svg"
+        alt=""
+        id="ham"
+        class="cursor-pointer z-4"
+      />
+    </nav>
+
+    <!-- ======================================================= -->
+
+    <header class="flex flex-col gap-[50px] item-center sm:hidden">
+      <div>
+        <img
+          src="/intro-section-with-dropdown-navigation-main/images/image-hero-mobile.png"
+          alt=""
+        />
+      </div>
+
+      <div class="flex flex-col gap-[25px] px-[10px]">
+        <h1 class="text-[35px] text-[var(--Gray-950)] text-center font-bold">
+          Make remote work
+        </h1>
+
+        <p
+          class="text-[17px] text-center text-[var(--Gray-500)] font-medium leading-[30px]"
+        >
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <button
+          class="flex m-auto w-[150px] text-[18px] h-[50px] items-center justify-center rounded-2xl text-center text-white font-medium bg-[var(--Gray-950)] cursor-pointer"
+        >
+          Learn more
+        </button>
+      </div>
+
+      <div class="flex items-center justify-between px-[10px] cursor-pointer">
+        <img
+          src="/intro-section-with-dropdown-navigation-main/images/client-databiz.svg"
+          alt=""
+          class="w-[90px] h-[18px]"
+        />
+        <img
+          src="/intro-section-with-dropdown-navigation-main/images/client-audiophile.svg"
+          alt=""
+          class="w-[60px] h-[30px]"
+        />
+        <img
+          src="/intro-section-with-dropdown-navigation-main/images/client-meet.svg"
+          alt=""
+          class="w-[70px] h-[20px]"
+        />
+        <img
+          src="/intro-section-with-dropdown-navigation-main/images/client-maker.svg"
+          alt=""
+          class="w-[80px] h-[20px]"
+        />
+      </div>
+    </header>
+
+    <!-- =================mobile dropdown============================ -->
+
+    <div
+      id="mobileMenu"
+      class="flex absolute right-0 top-0 opacity-0 scale-x-0 transition-all duration-500 ease-in-out origin-right sm:hidden"
+    >
+      <div class="w-[400px] h-[900px] bg-[black] opacity-60"></div>
+
+      <div
+        class="w-[240px] h-[900px] bg-white flex flex-col gap-[35px] px-[20px] py-[30px]"
+      >
+        <div class="flex flex-row-reverse">
+          <img
+            src="/intro-section-with-dropdown-navigation-main/images/icon-close-menu.svg"
+            alt=""
+            class="cursor-pointer"
+            id=""
+          />
+        </div>
+
+        <div
+          class="flex flex-col gap-[25px] text-[18px] text-[var(--Gray-500)] font-medium"
+        >
+          <div class="flex flex-col gap-[25px]">
+            <div id="feat" class="flex items-center gap-[10px] cursor-pointer">
+              <a href="">Features</a>
+
+              <img
+                src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg"
+                alt=""
+                id="arrow"
+              />
+            </div>
+
+            <div
+              id="featDrop"
+              class="flex flex-col cursor-pointer pl-[30px] gap-[20px] hidden"
+            >
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-todo.svg"
+                  alt=""
+                />
+
+                <p>Todo List</p>
+              </div>
+
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-calendar.svg"
+                  alt=""
+                />
+
+                <p>Calendar</p>
+              </div>
+
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-reminders.svg"
+                  alt=""
+                />
+
+                <p>Reminders</p>
+              </div>
+
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-planning.svg"
+                  alt=""
+                />
+
+                <p>Planning</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="comp" class="flex flex-col gap-[10px]">
+            <div class="flex items-center gap-[10px] cursor-pointer">
+              <a href="">Company</a>
+
+              <img
+                src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg"
+                alt=""
+                id="arrowed"
+              />
+            </div>
+
+            <div
+              id="compDrop"
+              class="flex flex-col cursor-pointer pl-[50px] gap-[20px] hidden"
+            >
+              <p>History</p>
+              <p>Our Team</p>
+              <p>Blog</p>
+            </div>
+          </div>
+
+          <a href="">Careers</a>
+          <a href="">About</a>
+        </div>
+
+        <div
+          class="flex flex-col items-center text-[var(--Gray-500)] font-medium gap-[20px]"
+        >
+          <a href="">Login</a>
+
+          <button
+            class="border border-2 rounded-2xl w-[210px] h-[50px] hover:cursor-pointer"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================================== -->
+    <!-- ===================Desktop View ================================ -->
+
+    <nav
+      class="sm:flex hidden sm:items-center sm:justify-between sm:m-auto w-[1440px] sm:pt-[30px] sm:pb-[30px] sm:px-[50px]"
+    >
+      <div class="flex gap-[60px]">
+        <img
+          src="/intro-section-with-dropdown-navigation-main/images/logo.svg"
+          alt=""
+          class="cursor-pointer"
+        />
+
+        <div
+          class="flex gap-[45px] text-[18px] w-[540px] text-[var(--Gray-500)]"
+        >
+          <div class="flex flex-col gap-[25px]">
+            <div id="featt" class="flex items-center gap-[10px] cursor-pointer">
+              <a href="" class="hover:font-bold">Features</a>
+
+              <img
+                src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg"
+                alt=""
+                id="arroww"
+              />
+            </div>
+
+            <div
+              id="featDropp"
+              class="flex flex-col items-start justify-center cursor-pointer gap-[10px] pl-[25px] absolute top-18 left-30 w-[170px] h-[200px] shadow-xl/20 rounded-2xl hidden"
+            >
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-todo.svg"
+                  alt=""
+                />
+
+                <p>Todo List</p>
+              </div>
+
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-calendar.svg"
+                  alt=""
+                />
+
+                <p>Calendar</p>
+              </div>
+
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-reminders.svg"
+                  alt=""
+                />
+
+                <p>Reminders</p>
+              </div>
+
+              <div class="flex gap-[10px] items-center">
+                <img
+                  src="/intro-section-with-dropdown-navigation-main/images/icon-planning.svg"
+                  alt=""
+                />
+
+                <p>Planning</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="compp" class="flex flex-col gap-[10px]">
+            <div class="flex items-center gap-[10px] cursor-pointer">
+              <a href="" class="hover:font-bold">Company</a>
+
+              <img
+                src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg"
+                alt=""
+                id="arroweddd"
+              />
+            </div>
+
+            <div
+              id="compDropp"
+              class="flex flex-col cursor-pointer pl-[10px] gap-[7px] items-start justify-center cursor-pointer pl-[25px] absolute top-18 left-80 w-[130px] h-[130px] shadow-xl/20 rounded-2xl hidden z-4"
+            >
+              <p>History</p>
+              <p>Our Team</p>
+              <p>Blog</p>
+            </div>
+          </div>
+
+          <a href="" class="hover:font-bold">Careers</a>
+          <a href="" class="hover:font-bold">About</a>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center w-[200px] text-[var(--Gray-500)] font-medium gap-[40px]"
+      >
+        <a href="" class="hover:font-bold">Login</a>
+
+        <button
+          class="border border-2 hover:border-4 rounded-2xl w-[120px] h-[50px] hover:font-bold cursor-pointer"
+        >
+          Register
+        </button>
+      </div>
+    </nav>
+
+    <!-- ====== -->
+
+    <header
+      class="sm:flex justify-center sm:gap-[50px] sm:m-auto w-[1440px] sm:item-start hidden px-[50px]"
+    >
+      <div class="flex flex-col pt-[170px] pl-[95px] gap-[180px]">
+        <div class="flex flex-col w-[450px] gap-[45px]">
+          <h1
+            class="text-[55px] leading-[50px] tracking-[1px] pr-[70px] text-[var(--Gray-950)] text-start font-bold"
+          >
+            Make remote work
+          </h1>
+
+          <p
+            class="text-[17px] pr-[10px] text-start text-[var(--Gray-500)] font-medium leading-[30px]"
+          >
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+
+          <button
+            class="flex w-[150px] text-[18px] h-[50px] items-center justify-center rounded-2xl text-center text-white font-medium bg-[var(--Gray-950)] cursor-pointer hover:bg-white hover:text-black border-2"
+          >
+            Learn more
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between cursor-pointer">
+          <img
+            src="/intro-section-with-dropdown-navigation-main/images/client-databiz.svg"
+            alt=""
+            class="w-[90px] h-[18px]"
+          />
+          <img
+            src="/intro-section-with-dropdown-navigation-main/images/client-audiophile.svg"
+            alt=""
+            class="w-[60px] h-[30px]"
+          />
+          <img
+            src="/intro-section-with-dropdown-navigation-main/images/client-meet.svg"
+            alt=""
+            class="w-[70px] h-[20px]"
+          />
+          <img
+            src="/intro-section-with-dropdown-navigation-main/images/client-maker.svg"
+            alt=""
+            class="w-[80px] h-[20px]"
+          />
+        </div>
+      </div>
+
+      <img
+        src="/intro-section-with-dropdown-navigation-main/images/image-hero-desktop.png"
+        alt=""
+        class="w-[650px] h-[750px] pt-[50px]"
+      />
+    </header>
+
+    <!-- ================================= -->
+    <script src="/app.js"></script>
+  </body>
+</html>
